@@ -78,9 +78,9 @@ const Index =()=> {
 
 
     gsap.fromTo('.running-text', {
-      x: -90,
+      x: -300,
     }, {
-      x: 800,
+      x: 0,
       duration: 8,
       scrollTrigger: {
         trigger: ".running-text",
@@ -112,7 +112,7 @@ const Index =()=> {
   return (
     <>
       <div className='w-full min-h-screen bg-blackLight '>
-        <div className="w-full bg-blackDark overflow-x-hidden">
+        <div className="w-full bg-blackDark overflow-x-hidden flex justify-center">
             <h1 className='running-text text-[5vw] font-extrabold leading-[7rem] text-primary'>DISCUS YOUR IDEAS</h1>
         </div>
 
@@ -127,19 +127,19 @@ const Index =()=> {
                     <div className="lg:col-span-5 md:col-span-12 col-span-12 mt-[60px]">
                         <div className="grid grid-cols-2 gap-4">
                             <Button 
-                                text='2022 Best Agency' 
+                                text='Web Animation' 
                                 variant="light"
                                 />
                             <Button 
-                                text='World Class Agency' 
+                                text='CRUD' 
                                 variant="white"
                                 />  
                             <Button 
-                                text='2022 Best Agency' 
+                                text='Responsive Design' 
                                 variant="white"
                                 />
                             <Button 
-                                text='World Class Agency' 
+                                text='4th Button' 
                                 variant="white"
                                 />  
                         </div>

@@ -20,12 +20,12 @@ const Index =()=>{
         //     },
         // })
 
-         gsap.fromTo('.text-right',{
+         gsap.fromTo('.from-right',{
             x:500,
             duration:4
          },{
             scrollTrigger:{
-                trigger:'.text-right',
+                trigger:'.from-right',
                 start:'top center',
                 end: '+=800',
                 toggleActions:'restart pause reverse none',
@@ -33,16 +33,16 @@ const Index =()=>{
                 pin:'true',
                 // markers:true
               },
-              x: -500,
+              x:0,
               duration:4,
             
         })
-        gsap.fromTo('.text-left',{
+        gsap.fromTo('.from-left',{
             x:-500,
             duration:4
          },{
             scrollTrigger:{
-                trigger:'.text-left',
+                trigger:'.from-left',
                 start:'top center',
                 end: '+=800',
                 toggleActions:'restart pause reverse none',
@@ -50,22 +50,21 @@ const Index =()=>{
                 pin:'true',
                 // markers:true
               },
-              x:500,
+              x:0,
               duration:4,
             
         })
     })
 
     return(
-        <div className="banner w-full h-[100vh] bg-primary p-5">
-            <div className="bg-blackLight rounded-[50px] w-full h-full overflow-hidden flex flex-col">
-                <p className="text-right text-[100px] font-semibold text-white">HIRE ME</p>
-                <p className="text-left text-[100px] font-semibold text-white">HIRE ME</p>
-                <p className="text-right text-[100px] font-semibold text-white">HIRE ME</p>
-                <p className="text-left text-[100px] font-semibold text-white">HIRE ME</p>
-
-            </div>
+        <div className="banner w-full h-[150vh] bg-primary p-5 flex ">
+        <div className="bg-blackLight rounded-[50px] w-full h-[90vh] overflow-hidden lg:leading-[7rem] md:leading-[10rem] leading-[7rem] flex flex-col justify-center items-center">
+            <p className="from-right lg:text-[8vw] md:text-[20vw] text-[20vw] font-semibold text-white">HIRE ME</p>
+            <p className="from-left lg:text-[8vw] md:text-[20vw] text-[20vw] font-semibold text-white">HIRE ME</p>
+            <p className="from-right lg:text-[8vw] md:text-[20vw] text-[20vw] font-semibold text-white">HIRE ME</p>
+            <p className="from-left lg:text-[8vw] md:text-[20vw] text-[20vw] font-semibold text-white">HIRE ME</p>
         </div>
+    </div>
 
     )
 }

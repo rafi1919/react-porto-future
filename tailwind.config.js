@@ -12,7 +12,7 @@ export default {
         primary: '#D6FF41',
         blackDark: '#101010',
         blackLight: '#171717',
-        grayDark: '#292929',
+        grayDark: '#353434',
         grayLight: '#C1C1C1',
 
       }

@@ -1,6 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
-import { twMerge } from 'tailwind-merge';
-import Button from "../../UI/Components/Button";
 import LayoutDark from '../../UI/Components/LayoutDark';
 
 const Index =()=> {

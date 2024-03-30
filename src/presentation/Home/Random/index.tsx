@@ -19,8 +19,11 @@ const Index =()=>{
           start: "top 70%",
           end: "top center", 
           scrub: 4,
+          // markers:true
+
         }
       });
+
 
     return(
         <LayoutDark>
@@ -31,10 +34,10 @@ const Index =()=>{
 
              </div>
              <div className='lg:col-span-4 md:col-span-12 col-span-12'>
-               <p className='w-full text-grayDark py-5'>Mostly about front end stuff *couse i am. My focus is on design and animation, and if i had more oportunity, i would loke to learn mobile</p>
+               <p className='w-full text-grayDark font-bold text-lg py-5'>Mostly about front end stuff *couse i am. My focus is on design and animation, and if i had more oportunity, i would like to learn mobile</p>
              </div>
            </div>
-           <div className=' gap-4 grid grid-cols-4'>
+           <div className=' gap-4 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-3'>
              <Button 
                  text='React' 
                  variant="light"

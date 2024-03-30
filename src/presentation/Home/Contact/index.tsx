@@ -14,8 +14,8 @@ const Index=()=>{
           duration: 2,
           scrollTrigger: {
             trigger: ".parallax-container",
-            start: "top center", 
-            end: "top 200px",
+            start: "top 80%", 
+            end: "top center",
             scrub: 3,
             toggleActions:'restart pause reverse none',
             // markers:true

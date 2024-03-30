@@ -22,7 +22,7 @@ setIsRoot(location.pathname == '/');
             <Outlet />
             </div>
         </main>
-        {/* {isRoot ? null : <Footer />} */}
+        {isRoot ? null : null}
         </>
     )
 };
