@@ -16,7 +16,7 @@ const serviceItems=[
     title:'NFT Website',
     content:[{
       subTitle:'Mekaverse',
-      image:'../src/assets/image/porto1.png',
+      image:'../src/assets/image/porto-meka.png',
       link:'https://vue-mekaverse-mg89.vercel.app/'
     }]
   },
@@ -24,7 +24,7 @@ const serviceItems=[
     title:'Game Website',
     content:[{
       subTitle:'Valorant',
-      image:'../src/assets/image/porto4.png',
+      image:'../src/assets/image/porto-valo.png',
       link:'https://next-rhino-valorant-psi.vercel.app/'
 
     },
@@ -34,16 +34,36 @@ const serviceItems=[
     title:'Admin Website',
     content:[{
       subTitle:'Mekaverse',
-      image:'../src/assets/image/porto3.png',
+      image:'../src/assets/image/porto-warung.png',
       link:'https://vue-mekaverse-mg89.vercel.app/'
     }]
   },
   {
     title:'Random Website',
     content:[{
+      subTitle:'Resto Friendo',
+      image:'../src/assets/image/porto-resto.png',
+      link:'https://frontend-dev-reactjs-rafi-ihsan.vercel.app/'
+    },
+    {
+      subTitle:'Preets App',
+      image:'../src/assets/image/porto-preets.png',
+      link:'https://vue-preets.vercel.app/'
+    },
+    {
       subTitle:'Toucan Farm',
       image:'../src/assets/image/porto3.png',
       link:'https://react-toucan-farm.vercel.app/'
+    },
+    {
+      subTitle:'Portofolio 1',
+      image:'../src/assets/image/porto-porto1.png',
+      link:'https://portofolio-chi-three.vercel.app/'
+    },
+    {
+      subTitle:'Portofolio 2',
+      image:'../src/assets/image/porto-porto2.png',
+      link:'https://react-porto-preets.vercel.app/'
     }]
   },
   
@@ -231,10 +251,10 @@ const CardItem: React.FC<CardProps> = ({ title, content, isOpen, onToggle, }) =>
               isOpen ? 'opacity-1' : 'opacity-0',
             )}
           ></div>
-          <div className='py-7 flex gap-5'>
+          <div className='py-7 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:items-baseline md:items-center items-center gap-5'>
           {content.map((item:any, index:any) => (
               <div key={index} className="py-7 max-w-[300px]" onClick={handleModalOpen} >
-                <img src={item.image} className='w-full'  alt={item.subTitle} />
+                <img src={item.image} className='w-full  object-cover'  alt={item.subTitle} />
                 <p className="font-semibold text-grayLight text-xl">{item.subTitle}</p>
                 <CardModal isOpen={isOpenModal} onClose={handleModalClose} image={item.image} subTitle={item.subTitle} link={item.link}  />     
 

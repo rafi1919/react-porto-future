@@ -58,7 +58,6 @@ const CardModal: React.FC<CardProps> = ({ isOpen, onClose, image, subTitle, link
                     <p onClick={onClose} className="cursor-pointer text-red-500 font-light text-[50px]">x </p>
                 </div>
                 <div className="py-7 max-w-[700px] flex flex-col items-center">
-
                     <img src={image} className="w-full rounded-lg " alt={subTitle} />
                     <p className="font-semibold text-grayLight text-3xl ">{subTitle}</p>
                     <p className="font-semibold text-grayLight text-xl">stack:</p>

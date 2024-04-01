@@ -21,13 +21,13 @@ const Index =()=>{
         // })
 
          gsap.fromTo('.from-right',{
-            x:500,
+            x:'250%',
             duration:4
          },{
             scrollTrigger:{
                 trigger:'.from-right',
                 start:'top center',
-                end: '+=800',
+                end: '+=650',
                 toggleActions:'restart pause reverse none',
                 scrub:true,
                 pin:'true',
@@ -38,13 +38,13 @@ const Index =()=>{
             
         })
         gsap.fromTo('.from-left',{
-            x:-500,
+            x:'-250%',
             duration:4
          },{
             scrollTrigger:{
                 trigger:'.from-left',
                 start:'top center',
-                end: '+=800',
+                end: '+=650',
                 toggleActions:'restart pause reverse none',
                 scrub:true,
                 pin:'true',

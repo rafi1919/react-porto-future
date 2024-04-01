@@ -7,7 +7,7 @@ const Index =()=> {
   return (
     <>
       <div className='w-full h-full bg-primary px-5 md:px-3'>
-        <div className='mx-auto lg:grid md:flex flex lg:grid-cols-12 md:flex-col-reverse flex-col-reverse w-full  pt-20'>
+        <div className='mx-auto lg:grid md:flex flex lg:grid-cols-12 md:flex-col-reverse flex-col-reverse w-full pt-20'>
           <div className="lg:col-span-7 md:col-span-12 col-span-12">
               <div className=' w-full'>
                 <h1 className='lg:text-[13vw] md:text-[20vw] text-[20vw] font-extrabold lg:leading-[10rem] md:leading-[10rem] leading-[7rem] text-green'>DIGITIZE IDEAS</h1>
