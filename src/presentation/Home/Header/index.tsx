@@ -1,8 +1,12 @@
-// import { useState } from 'react'
+// import { useState, useEffect, useRef } from 'react'
 import Button from "../../UI/Components/Button"
 // import Navbar from "../../UI/Components/Navbar"
+// import gsap from 'gsap'
 
 const Index =()=> {
+
+
+
 
   return (
     <>
@@ -15,8 +19,12 @@ const Index =()=> {
             
           </div>
           <div className="lg:col-span-5 md:col-span-12 col-span-1">
-            <div className="w-full h-[300px] rounded-lg bg-grayDark my-3">
+            <div className="w-full h-[300px] rounded-lg bg-grayDark my-3 overflow-hidden flex items-end">
+              {/* <div className='w-[100px] h-[100px] bg-white'></div>
+              <div className='w-[100px] h-[100px] bg-red-500'></div>
+              <div className='w-[100px] h-[100px] bg-blue-500'></div> */}
 
+              <img src='../src/assets/image/profile1.png' alt='profile1' className="max-w-[200px] bottom-0 mx-auto"/>
             </div>
             <p className="text-blackLight">Hi, im <span className="font-bold">Rafi</span> a content creator and front-end developer who like to animate website. I can use React, Next, Vue but react in daily basis. I Learn by project and aiming to travel the world through my code</p>
           </div>
