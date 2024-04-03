@@ -24,7 +24,7 @@ const Index =()=> {
               <div className='w-[100px] h-[100px] bg-red-500'></div>
               <div className='w-[100px] h-[100px] bg-blue-500'></div> */}
 
-              <img src='../src/assets/image/profile1.png' alt='profile1' className="max-w-[200px] bottom-0 mx-auto"/>
+              <img src='/image/profile1.png' alt='profile1' className="max-w-[200px] bottom-0 mx-auto"/>
             </div>
             <p className="text-blackLight">Hi, im <span className="font-bold">Rafi</span> a content creator and front-end developer who like to animate website. I can use React, Next, Vue but react in daily basis. I Learn by project and aiming to travel the world through my code</p>
           </div>

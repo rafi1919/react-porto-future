@@ -16,7 +16,7 @@ const serviceItems=[
     title:'NFT Website',
     content:[{
       subTitle:'Mekaverse',
-      image:'../src/assets/image/porto-meka.png',
+      image:'/image/porto-meka.png',
       link:'https://vue-mekaverse-mg89.vercel.app/'
     }]
   },
@@ -24,7 +24,7 @@ const serviceItems=[
     title:'Game Website',
     content:[{
       subTitle:'Valorant',
-      image:'../src/assets/image/porto-valo.png',
+      image:'/image/porto-valo.png',
       link:'https://next-rhino-valorant-psi.vercel.app/'
 
     },
@@ -34,7 +34,7 @@ const serviceItems=[
     title:'Admin Website',
     content:[{
       subTitle:'Mekaverse',
-      image:'../src/assets/image/porto-warung.png',
+      image:'/image/porto-warung.png',
       link:'https://vue-mekaverse-mg89.vercel.app/'
     }]
   },
@@ -42,27 +42,27 @@ const serviceItems=[
     title:'Random Website',
     content:[{
       subTitle:'Resto Friendo',
-      image:'../src/assets/image/porto-resto.png',
+      image:'/image/porto-resto.png',
       link:'https://frontend-dev-reactjs-rafi-ihsan.vercel.app/'
     },
     {
       subTitle:'Preets App',
-      image:'../src/assets/image/porto-preets.png',
+      image:'/image/porto-preets.png',
       link:'https://vue-preets.vercel.app/'
     },
     {
       subTitle:'Toucan Farm',
-      image:'../src/assets/image/porto-toucan.png',
+      image:'/image/porto-toucan.png',
       link:'https://react-toucan-farm.vercel.app/'
     },
     {
       subTitle:'Portofolio 1',
-      image:'../src/assets/image/porto-porto1.png',
+      image:'/image/porto-porto1.png',
       link:'https://portofolio-chi-three.vercel.app/'
     },
     {
       subTitle:'Portofolio 2',
-      image:'../src/assets/image/porto-porto2.png',
+      image:'/image/porto-porto2.png',
       link:'https://react-porto-preets.vercel.app/'
     }]
   },
