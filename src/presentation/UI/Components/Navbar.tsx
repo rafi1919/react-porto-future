@@ -10,7 +10,7 @@ const Navbar =()=>{
     }
 
     return(
-        <div className="w-full flex justify-between p-5 bg-primary">
+        <div className="fixed w-full flex justify-between p-5 bg-primary">
             <div className="">
                 <p className="font-bold">Rafi's Porto</p>
             </div>

@@ -17,7 +17,8 @@ const serviceItems=[
     content:[{
       subTitle:'Mekaverse',
       image:'/image/porto-meka.png',
-      link:'https://vue-mekaverse-mg89.vercel.app/'
+      link:'https://vue-mekaverse-mg89.vercel.app/',
+      stack:'Vue, Bootstrap, Data Aos'
     }]
   },
   {
@@ -25,7 +26,8 @@ const serviceItems=[
     content:[{
       subTitle:'Valorant',
       image:'/image/porto-valo.png',
-      link:'https://next-rhino-valorant-psi.vercel.app/'
+      link:'https://next-rhino-valorant-psi.vercel.app/',
+      stack:'Next, Typescript, Tailwind, Framer Motion'
 
     },
    ],
@@ -33,9 +35,19 @@ const serviceItems=[
   {
     title:'Admin Website',
     content:[{
-      subTitle:'Mekaverse',
+      subTitle:'Warung Cell Admin',
       image:'/image/porto-warung.png',
-      link:'https://vue-mekaverse-mg89.vercel.app/'
+      stack:'Laravel, Bootstrap, MySql'
+    },
+    {
+      subTitle:'Digies Perpus Admin',
+      image:'/image/porto-digies.png',
+      stack:'Html, CSS, PHP, Bootstrap, MySql'
+    },
+    {
+      subTitle:'Sistem Kepegawaian SD Aisyiyah',
+      image:'/image/porto-pandes.png',
+      stack:'Html, CSS, PHP, Bootstrap, MySql'
     }]
   },
   {
@@ -43,27 +55,34 @@ const serviceItems=[
     content:[{
       subTitle:'Resto Friendo',
       image:'/image/porto-resto.png',
-      link:'https://frontend-dev-reactjs-rafi-ihsan.vercel.app/'
+      link:'https://frontend-dev-reactjs-rafi-ihsan.vercel.app/',
+      stack:'React, Bootstrap'
     },
     {
       subTitle:'Preets App',
       image:'/image/porto-preets.png',
-      link:'https://vue-preets.vercel.app/'
+      link:'https://vue-preets.vercel.app/',
+      stack:'Vue, DaisyUi'
     },
     {
       subTitle:'Toucan Farm',
       image:'/image/porto-toucan.png',
-      link:'https://react-toucan-farm.vercel.app/'
+      link:'https://react-toucan-farm.vercel.app/',
+      stack:'React, Typescript, Tailwind'
+
     },
     {
       subTitle:'Portofolio 1',
       image:'/image/porto-porto1.png',
-      link:'https://portofolio-chi-three.vercel.app/'
+      link:'https://portofolio-chi-three.vercel.app/',
+      stack:'React, MUI'
+
     },
     {
       subTitle:'Portofolio 2',
       image:'/image/porto-porto2.png',
-      link:'https://react-porto-preets.vercel.app/'
+      link:'https://react-porto-preets.vercel.app/',
+      stack:'React, MUI'
     }]
   },
   
@@ -95,7 +114,6 @@ const Index =()=> {
 
       }
     });
-
 
     gsap.fromTo('.running-text', {
       x: -300,
@@ -209,14 +227,18 @@ const CardItem: React.FC<CardProps> = ({ title, content, isOpen, onToggle, }) =>
   const [height, setHeight] = useState<string>('0px');
   const contentElement = useRef<HTMLDivElement>(null);
   const [isOpenModal, setisOpenModal] = useState(false)
+  const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
 
-  const handleModalOpen=()=>{
+  const handleModalOpen=(subTitle:string)=>{
     setisOpenModal(!isOpenModal)
+    setSelectedCardId(subTitle)
   }
 
   const handleModalClose = () => {
     setisOpenModal(false);
-};
+  };
+
+ 
 
   useEffect(()=>{
     if(contentElement.current) {
@@ -253,14 +275,17 @@ const CardItem: React.FC<CardProps> = ({ title, content, isOpen, onToggle, }) =>
           ></div>
           <div className='py-7 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:items-baseline md:items-center items-center gap-5'>
           {content.map((item:any, index:any) => (
-              <div key={index} className="py-7 max-w-[300px]" onClick={handleModalOpen} >
+              <div key={index} className="py-7 max-w-[300px]" onClick={()=>handleModalOpen(item.subTitle)} >
                 <img src={item.image} className='w-full  object-cover'  alt={item.subTitle} />
                 <p className="font-semibold text-grayLight text-xl">{item.subTitle}</p>
-                <CardModal isOpen={isOpenModal} onClose={handleModalClose} image={item.image} subTitle={item.subTitle} link={item.link}  />     
-
+              {selectedCardId === item.subTitle && (
+                <CardModal isOpen={isOpenModal} onClose={handleModalClose} image={item.image} subTitle={item.subTitle} link={item.link} stack={item.stack} />     
+              )}
+        
               </div>
           ))}
           </div>
+        
         </div>
       </div>
     </div>

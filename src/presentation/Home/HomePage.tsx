@@ -56,9 +56,6 @@ function Home() {
               <Random />
               <Contact />
               <Footer />
-              <div className='circle w-6 h-6 border-red-100 border-2 rounded-full'>
-
-              </div>
             </div>
         </div>
       </div>

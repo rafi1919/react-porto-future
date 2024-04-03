@@ -9,9 +9,10 @@ interface CardProps {
     image: string;
     subTitle: string;
     link: string;
+    stack:string
 }
 
-const CardModal: React.FC<CardProps> = ({ isOpen, onClose, image, subTitle, link }) => {
+const CardModal: React.FC<CardProps> = ({ isOpen, onClose, image, subTitle, link, stack}) => {
     const cardRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -52,7 +53,7 @@ const CardModal: React.FC<CardProps> = ({ isOpen, onClose, image, subTitle, link
     }, [isOpen]);
 
     return (
-        <div className={twMerge(`fixed top-0 left-0 z-50 w-full h-[100vh] flex items-center justify-center backdrop-blur-sm duration-500`, isOpen ? 'visible' : 'hidden')}>
+        <div className={twMerge(`fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm duration-500`, isOpen ? 'visible' : 'hidden')}>
             <div ref={cardRef} className="absolute p-8 ">
                 <div className="flex justify-end mb-4">
                     <p onClick={onClose} className="cursor-pointer text-red-500 font-light text-[50px]">x </p>
@@ -60,9 +61,13 @@ const CardModal: React.FC<CardProps> = ({ isOpen, onClose, image, subTitle, link
                 <div className="py-7 max-w-[700px] flex flex-col items-center">
                     <img src={image} className="w-full rounded-lg " alt={subTitle} />
                     <p className="font-semibold text-grayLight text-3xl ">{subTitle}</p>
-                    <p className="font-semibold text-grayLight text-xl">stack:</p>
-                    <p className="font-semibold text-grayLight text-xl">Tailwind, Vue, Framer Motion</p>
-                    <Link to={link} className="font-semibold text-grayLight text-xl">(Visit Website)</Link>
+                    <p className="font-light text-grayLight text-xl">stack:</p>
+                    <p className="font-light text-grayLight text-xl">{stack}</p>
+                    {link ? (
+                        <Link to={link} className="font-semibold text-primary text-xl">(Visit Website)</Link>
+                    ) : (
+                        <p className="font-semibold text-primary text-xl">Website is not deployed</p>
+                    )}                
                 </div>
             </div>
         </div>
