@@ -59,6 +59,18 @@ const serviceItems=[
       stack:'React, Bootstrap'
     },
     {
+      subTitle:'CountryDex',
+      image:'/image/porto-countrydex.png',
+      link:'https://react-agile-test.vercel.app/',
+      stack:'React, Gsap, Tailwind'
+    },
+    {
+      subTitle:'Gread Blog',
+      image:'/image/porto-gread.png',
+      link:'https://next-synapsis-rafi.vercel.app/',
+      stack:'Nextjs, Tailwind'
+    },
+    {
       subTitle:'Preets App',
       image:'/image/porto-preets.png',
       link:'https://vue-preets.vercel.app/',
